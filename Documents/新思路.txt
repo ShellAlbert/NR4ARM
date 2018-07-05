@@ -1,0 +1,14 @@
+1.CaptureThread
+2.Queue
+3.NoiseCutThread
+4.Queue
+5.PCMEncThread
+6.Queue
+7.TcpThread
+
+1.将采集到的pcm降噪后，通过opus编码写入本地文件enc.opus文件中。
+2.将enc.opus文件解码还原成pcm数据，然后播放测试。
+3.播放指令aplay -t raw -f S16_LE -r 48000 dec.pcm
+
+
+
