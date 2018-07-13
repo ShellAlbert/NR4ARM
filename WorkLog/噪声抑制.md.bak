@@ -1,11 +1,22 @@
 # Noise Suppression(噪声抑制)
-----
+---
 ## 一、程序数据流描述
 1.CaptureThread->Queue->NoiseCutThread->Queue->PlaybackThread  
 2.CaptureThread->Queue->NoiseCutThread->Queue->OpusEncodeThread->Queue->TcpTxThread  
-3.（行尾+2个空格+回车可实现markdown换行。)  
+3.(行尾+2个空格+回车可实现markdown换行)  
+ 
 ## 二、采集线程
+CaptureThread使用ALSA的框架API负责不断的从采集设备中读取pcm裸数据，然后将数据帧投入到队列中。  
+等待NoiseCutThread从队列中取出一帧数据，作去噪算法处理。  
+在Linux系统下使用arecord -L/arecord -l可以查看符合ALSA框架下的录音设备。  
+一般传递给snd_pcm_open()打开pcm设备的名字为"plughw:CARD=USB20,DEV=0"  
+
 ## 三、噪声抑制线程
+NoiseCutThread每次从队列中取出一帧原始pcm数据，然后根据算法要求的数据块进行切割，循环处理多次，以完成数据去噪算法。  
+噪声去除后，将数据投入两个队列中，一个用于本地回放，另一个用于编码处理。  
+目前使用的算法能3种，1是RNNoise，2是WebRTC，3是自研。  
+
 ## 四、回放线程
+
 ## 五、Opus编码线程
 ## 六、TCP发送线程
