@@ -1,9 +1,11 @@
 # Noise Suppression(噪声抑制)
-## 程序数据流描述
-1.CaptureThread->Queue->NoiseCutThread->Queue->PlaybackThread
-2.                                    ->Queue->OpusEncodeThread->Queue->TcpTxThread
-## 采集线程
-## 噪声抑制线程
-## 回放线程
-## Opus编码线程
-## TCP发送线程
+----
+## 一、程序数据流描述
+1.CaptureThread->Queue->NoiseCutThread->Queue->PlaybackThread  
+2.CaptureThread->Queue->NoiseCutThread->Queue->OpusEncodeThread->Queue->TcpTxThread  
+3.（行尾+2个空格+回车可实现markdown换行。)  
+## 二、采集线程
+## 三、噪声抑制线程
+## 四、回放线程
+## 五、Opus编码线程
+## 六、TCP发送线程
