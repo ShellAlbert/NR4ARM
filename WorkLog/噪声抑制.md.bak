@@ -4,7 +4,7 @@
 1.CaptureThread->Queue->NoiseCutThread->Queue->PlaybackThread  
 2.CaptureThread->Queue->NoiseCutThread->Queue->OpusEncodeThread->Queue->TcpTxThread  
 ![Arch_NR4ARM.png]https://github.com/ShellAlbert/NR4ARM/blob/master/WorkLog/Arch_NR4ARM.png  
-  
+ 
 ## 二、采集线程
 CaptureThread使用ALSA的框架API负责不断的从采集设备中读取pcm裸数据，然后将数据帧投入到队列中。  
 等待NoiseCutThread从队列中取出一帧数据，作去噪算法处理。  
