@@ -1,4 +1,4 @@
-#Noise Suppression(噪声抑制)
+#Noise Suppression 噪声抑制
 ##程序数据流描述
 1.CaptureThread->Queue->NoiseCutThread->Queue->PlaybackThread
 2.                                    ->Queue->OpusEncodeThread->Queue->TcpTxThread
