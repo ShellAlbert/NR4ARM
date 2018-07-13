@@ -3,7 +3,7 @@
 ## Ò»¡¢³ÌÐòÊý¾ÝÁ÷ÃèÊö
 1.CaptureThread->Queue->NoiseCutThread->Queue->PlaybackThread  
 2.CaptureThread->Queue->NoiseCutThread->Queue->OpusEncodeThread->Queue->TcpTxThread  
-![Arch_NR4ARM.png]https://github.com/ShellAlbert/NR4ARM/blob/master/WorkLog/Arch_NR4ARM.png  
+![Arch_NR4ARM.png](https://github.com/ShellAlbert/NR4ARM/blob/master/WorkLog/Arch_NR4ARM.png)  
  
 ## ¶þ¡¢²É¼¯Ïß³Ì
 CaptureThreadÊ¹ÓÃALSAµÄ¿ò¼ÜAPI¸ºÔð²»¶ÏµÄ´Ó²É¼¯Éè±¸ÖÐ¶ÁÈ¡pcmÂãÊý¾Ý£¬È»ºó½«Êý¾ÝÖ¡Í¶Èëµ½¶ÓÁÐÖÐ¡£  
@@ -14,9 +14,15 @@ CaptureThreadÊ¹ÓÃALSAµÄ¿ò¼ÜAPI¸ºÔð²»¶ÏµÄ´Ó²É¼¯Éè±¸ÖÐ¶ÁÈ¡pcmÂãÊý¾Ý£¬È»ºó½«Êý¾ÝÖ¡Í
 ## Èý¡¢ÔëÉùÒÖÖÆÏß³Ì
 NoiseCutThreadÃ¿´Î´Ó¶ÓÁÐÖÐÈ¡³öÒ»Ö¡Ô­Ê¼pcmÊý¾Ý£¬È»ºó¸ù¾ÝËã·¨ÒªÇóµÄÊý¾Ý¿é½øÐÐÇÐ¸î£¬Ñ­»·´¦Àí¶à´Î£¬ÒÔÍê³ÉÊý¾ÝÈ¥ÔëËã·¨¡£  
 ÔëÉùÈ¥³ýºó£¬½«Êý¾ÝÍ¶ÈëÁ½¸ö¶ÓÁÐÖÐ£¬Ò»¸öÓÃÓÚ±¾µØ»Ø·Å£¬ÁíÒ»¸öÓÃÓÚ±àÂë´¦Àí¡£  
+ÕâÀïÒª×¢ÒâµÄÊÇ¿ÉÄÜ»áÓÐÒÅÁôÐ¡Î²°Í×Ö½Ú£¬ÔòÐèÒªÈ¡ÏÂÒ»Ö¡Êý¾ÝµÄÇ°ÃæµÄ²¿·ÖÊý¾ÝÆ´³ÉÒ»¸öÍêÕûµÄÖ¡´¦Àí¡£   
+Í¬Ê±ÕâÀï×÷ÁËÒ»¸ö±êÖ¾Î»£¬Ö»ÓÐÓÐ¿Í»§¶ËÁ¬½ÓÉÏÊ±£¬²Å½«´¦ÀíÍêµÄÊý¾ÝÍ¶Èë±àÂë¶ÓÁÐÖÐ¡£   
 Ä¿Ç°Ê¹ÓÃµÄËã·¨ÓÐ3ÖÖ£¬1ÊÇRNNoise£¬2ÊÇWebRTC£¬3ÊÇ×ÔÑÐ¡£  
 
 ## ËÄ¡¢»Ø·ÅÏß³Ì
+PlaybackThreadÃ¿´Î´Ó¶ÓÁÐÖÐÈ¡³öÒ»Ö¡Êý¾Ý£¬È»ºóÐ´Èëµ½pcmÉè±¸ÖÐ£¬Íê³É²¥·Å¹¦ÄÜ¡£  
 
 ## Îå¡¢Opus±àÂëÏß³Ì
+PCMEncThreadÃ¿´Î´Ó¶ÓÁÐÖÐÈ¡³öÒ»Ö¡Êý¾Ý£¬È»ºóµ÷ÓÃlibopus¿â½øÐÐ±àÂë£¬±àÂëÍê³Éºó£¬Í¶Èëµ½·¢ËÍ¶ÓÁÐÖÐ£¬µÈ´ý·¢ËÍ¡£  
+
 ## Áù¡¢TCP·¢ËÍÏß³Ì
+TCP·þÎñÆ÷ÔÚ6800¶Ë¿Ú´¦¼àÌý£¬Ò»µ©ÓÐ¿Í»§¶ËÁ¬½ÓÉÏÊ±£¬Ôò
